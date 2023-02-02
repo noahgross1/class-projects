@@ -1,14 +1,16 @@
 import { useState } from 'react';
 import BookEdit from './BookEdit';
+import useBooksContext from '../hooks/use-books-context';
 
-function BookShow({ book, onDelete, onEdit }) {
+function BookShow({ book }) {
     const [showEdit, setShowEdit] = useState(false);
+    const { deleteBookById } = useBooksContext();
 
     /**
      * Delete book.
      */
     const handleDeleteClick = () => {
-        onDelete(book.id);
+        deleteBookById(book.id);
     };
 
     const handleEditClick  = () => {
@@ -17,11 +19,8 @@ function BookShow({ book, onDelete, onEdit }) {
 
     /**
      * Close form after updating title
-     * @param {*} id id of book to edit
-     * @param {*} newTitle newTitle of book 
      */
-    const handleSubmit = (id, newTitle) => {
-        onEdit(id, newTitle);
+    const handleSubmit = () => {
         setShowEdit(false);
     };
 

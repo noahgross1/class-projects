@@ -1,16 +1,12 @@
 {
   "books": [
     {
-      "title": "Hunger Games",
+      "title": "Hunger Games3",
       "id": 7
     },
     {
-      "title": "Hunger Games",
-      "id": 8
-    },
-    {
-      "title": "Hunger Games",
-      "id": 9
+      "title": "Gone with the wind",
+      "id": 10
     }
   ]
 }
